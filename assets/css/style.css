@@ -1,0 +1,116 @@
+:root {
+    --lightest-color: #f3f3f3;
+    --light-color: #ececec;
+    --medium-color: #dbdbdb;
+    --radius: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+table {
+    min-width: 500px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 1em 0;
+    background-color: var(--lightest-color);
+    text-align: center;
+    vertical-align: center;
+}
+
+thead p:nth-child(2) {
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+thead p:nth-child(2)+p {
+    margin-top: 0px;
+}
+
+thead th {
+    color: var(--lightest-color);
+}
+
+thead th:not(th:first-child) {
+    width: 17%;
+}
+
+thead th:nth-child(2) {
+    background-color: #4d638f;
+}
+
+thead th:nth-child(3) {
+    background-color: #2e4273;
+}
+
+thead th:nth-child(4) {
+    background-color: #142a58;
+}
+
+thead th:nth-child(5) {
+    background-color: #06163c;
+}
+
+thead th:first-child {
+    border-top-left-radius: var(--radius);
+    background-color: #7987ac;
+}
+
+thead th:first-child::first-letter {
+    text-transform: uppercase;
+}
+
+thead th:last-child {
+    border-top-right-radius: var(--radius);
+    background-color: #07153a;
+}
+
+tbody tr:nth-child(odd) td:nth-child(odd),
+tfoot tr:nth-child(odd) td:nth-child(odd) {
+    background-color: var(--medium-color)
+}
+
+tbody tr:nth-child(odd) td:nth-child(even),
+tbody tr:nth-child(even) td:nth-child(odd),
+tfoot tr:nth-child(odd) td:nth-child(even) {
+    background-color: var(--light-color)
+}
+tbody td:first-letter{
+    text-transform: uppercase;
+}
+
+tbody td:first-child {
+    padding-left: 1em;
+    text-align: left;
+}
+tbody td{
+    font-family: serif;
+    font-size: 18px;
+}
+
+tfoot td:first-child {
+    border-bottom-left-radius: var(--radius);
+}
+
+tfoot td:last-child {
+    border-bottom-right-radius: var(--radius);
+}
+tfoot button{
+    min-width: 70px;
+    width: 50%;
+    max-width: 120px;
+    padding: 10px 5px;
+    border:1px solid grey;
+    background-color:var(--medium-color);
+    
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    cursor: pointer;
+}
